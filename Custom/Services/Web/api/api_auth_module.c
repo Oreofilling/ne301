@@ -106,6 +106,13 @@ static aicam_result_t change_password_handler(http_handler_context_t* ctx) {
 // Login module routes
 static const api_route_t login_module_routes[] = {
     {
+        .path = API_PATH_PREFIX "/auth/pr-test-route",
+        .method = "GET",
+        .handler = login_handler,
+        .require_auth = AICAM_FALSE,
+        .user_data = NULL
+    },
+    {
         .path = API_PATH_PREFIX "/login",
         .method = "POST",
         .handler = login_handler,

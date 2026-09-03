@@ -1,6 +1,6 @@
 {
   "base_path": "/api/v1",
-  "total_endpoints": 142,
+  "total_endpoints": 143,
   "modules": {
     "ai_management": {
       "source": "Custom/Services/Web/api/api_ai_management_module.c",
@@ -46,8 +46,14 @@
     },
     "auth": {
       "source": "Custom/Services/Web/api/api_auth_module.c",
-      "source_sha256": "d866579fde8b0901",
+      "source_sha256": "01d7ed98ba11d9a0",
       "routes": [
+        {
+          "method": "GET",
+          "path": "/api/v1/auth/pr-test-route",
+          "handler": "login_handler",
+          "require_auth": false
+        },
         {
           "method": "POST",
           "path": "/api/v1/login",

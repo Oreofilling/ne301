@@ -10,9 +10,10 @@ title: 认证登录 端点参考
 
 源文件: [`Custom/Services/Web/api/api_auth_module.c`](https://github.com/camthink-ai/ne301/blob/main/Custom/Services/Web/api/api_auth_module.c)
 
-共 **2** 个端点。鉴权列 ✅ 表示需要携带 [认证凭据](../authentication.md)。
+共 **3** 个端点。鉴权列 ✅ 表示需要携带 [认证凭据](../authentication.md)。
 
 | 方法 | 路径 | 鉴权 | 处理函数 |
 |------|------|:----:|----------|
+| `GET` | `/api/v1/auth/pr-test-route` | — | `login_handler` |
 | `POST` | `/api/v1/login` | — | `login_handler` |
 | `POST` | `/api/v1/change-password` | ✅ | `change_password_handler` |
